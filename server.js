@@ -16,10 +16,7 @@ app.use(session({
 	store				:	new MongoStore({		// Para almacenar en base de datos las sesiones 
 		url				:	MONGO_URL,				// Nombre de la base de datos a almacenar las sesiones
 		autoReconnect	:	true					// Auto reconexión en caso de fallar
-	}),
-	cookie				:	{
-		maxAge			:	1
-	}
+	})
 }))
 
 app.get('/', (req, res) => {
